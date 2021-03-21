@@ -24,7 +24,8 @@ var rsvpListener = null;
 var guestbookListener = null;
 
 async function main() {
- // Add Firebase project configuration object here
+  
+   // Add Firebase project configuration object here
   var firebaseConfig = {
     apiKey: "AIzaSyAG4TctI3NZymEN5wo8nyZC8pG7lq9d29Q",
     authDomain: "web-codelab-a5b4d.firebaseapp.com",
@@ -34,9 +35,6 @@ async function main() {
     appId: "1:153017746680:web:0bdc7914d5a8376b5a270d"
   };
 
-   firebase.initializeApp(firebaseConfig);
-  var firebaseConfig = {};
-
   // Make sure Firebase is initilized
   try {
     if (firebaseConfig && firebaseConfig.apiKey) {
@@ -44,9 +42,9 @@ async function main() {
     }
     let app = firebase.app();
   } catch (e) {
+    console.log(e);
     document.getElementById("app").innerHTML =
       "<h1>Welcome to the Codelab! Add your Firebase config object to <pre>/index.js</pre> and refresh to get started</h1>";
-    console.log(e);
     throw new Error(
       "Welcome to the Codelab! Add your Firebase config object from the Firebase Console to `/index.js` and refresh to get started"
     );
@@ -88,11 +86,13 @@ async function main() {
       // Show guestbook to logged-in users
       guestbookContainer.style.display = "block";
       subscribeGuestbook();
+      subscribeCurrentRSVP(user);
     } else {
       startRsvpButton.textContent = "RSVP";
       // Hide guestbook for non-logged-in users
       guestbookContainer.style.display = "none";
       unsubscribeGuestbook();
+      unsubscribeCurrentRSVP();
     }
   });
 
@@ -100,7 +100,7 @@ async function main() {
   form.addEventListener("submit", e => {
     // Prevent the default form redirect
     e.preventDefault();
-    // Write a new message to the database collection 'guestbook'
+    // Write a new message to the database collection "guestbook"
     firebase
       .firestore()
       .collection("guestbook")
@@ -115,6 +115,48 @@ async function main() {
     // Return false to avoid redirect
     return false;
   });
+
+  // Listen to RSVP responses
+  rsvpYes.onclick = () => {
+    // Get a reference to the user's document in the attendees collection
+    const userDoc = firebase
+      .firestore()
+      .collection("attendees")
+      .doc(firebase.auth().currentUser.uid);
+
+    // If they RSVP'd yes, save a document with attending: true
+    userDoc
+      .set({
+        attending: true
+      })
+      .catch(console.error);
+  };
+
+  rsvpNo.onclick = () => {
+    // Get a reference to the user's document in the attendees collection
+    const userDoc = firebase
+      .firestore()
+      .collection("attendees")
+      .doc(firebase.auth().currentUser.uid);
+
+    // If they RSVP'd yes, save a document with attending: true
+    userDoc
+      .set({
+        attending: false
+      })
+      .catch(console.error);
+  };
+
+  // Listen for attendee list
+  firebase
+    .firestore()
+    .collection("attendees")
+    .where("attending", "==", true)
+    .onSnapshot(snap => {
+      const newAttendeeCount = snap.docs.length;
+
+      numberAttending.innerHTML = newAttendeeCount + " people going";
+    });
 }
 main();
 
@@ -144,4 +186,35 @@ function unsubscribeGuestbook() {
     guestbookListener();
     guestbookListener = null;
   }
+}
+
+// Listen for attendee list
+function subscribeCurrentRSVP(user) {
+  rsvpListener = firebase
+    .firestore()
+    .collection("attendees")
+    .doc(user.uid)
+    .onSnapshot(doc => {
+      if (doc && doc.data()) {
+        const attendingResponse = doc.data().attending;
+
+        // Update css classes for buttons
+        if (attendingResponse) {
+          rsvpYes.className = "clicked";
+          rsvpNo.className = "";
+        } else {
+          rsvpYes.className = "";
+          rsvpNo.className = "clicked";
+        }
+      }
+    });
+}
+
+function unsubscribeCurrentRSVP() {
+  if (rsvpListener != null) {
+    rsvpListener();
+    rsvpListener = null;
+  }
+  rsvpYes.className = "";
+  rsvpNo.className = "";
 }
