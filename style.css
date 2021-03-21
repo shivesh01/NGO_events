@@ -1,3 +1,58 @@
+
+/* added nav bar*/
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+
+}
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #C9E8FD;
+  font-family: 'Roboto', sans-serif;
+  margin-right: 50px;
+  margin-left: 150px;
+  
+  
+}
+
+.logo{
+
+  text-transform: uppercase;
+  color: black;
+  letter-spacing:  2px;
+  font-size: 20px;
+
+
+
+  
+}
+
+.nav-links{
+  display: flex;
+  justify-content: space-around;
+  width:30%;
+}
+
+.nav-links li{
+  list-style: none;
+}
+
+.nav-links a{
+  color: black;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* nav bar ending */
+
+
 @media all and (min-width:1200px){
   #app{
     max-width: 1000px;
