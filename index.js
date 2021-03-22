@@ -88,7 +88,7 @@ async function main() {
       subscribeGuestbook();
       subscribeCurrentRSVP(user);
     } else {
-      startRsvpButton.textContent = "RSVP";
+      startRsvpButton.textContent = "LOG IN";
       // Hide guestbook for non-logged-in users
       guestbookContainer.style.display = "none";
       unsubscribeGuestbook();
@@ -208,7 +208,7 @@ function subscribeCurrentRSVP(user) {
         }
       }
     });
-}
+
 
 function unsubscribeCurrentRSVP() {
   if (rsvpListener != null) {
@@ -217,4 +217,8 @@ function unsubscribeCurrentRSVP() {
   }
   rsvpYes.className = "";
   rsvpNo.className = "";
+}
+
+
+
 }
