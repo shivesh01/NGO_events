@@ -2,61 +2,183 @@
   <meta charset="utf-8">
   <title>Firebase Meetup</title>
   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/4.0.0/firebaseui.css" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:300,400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:300,400,700&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-<div id="app">
-  <img src="https://cloud-ahd7o4m5a-hack-club-bot.vercel.app/0image.jpg" />
 
-  
- <section id="event-details-container">
+
+  <nav>
+    <div class="logo">
+      <h4>Sustainable NGOs</h4>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="a">Home</a>
+      </li>
+      <li>
+        <a href="a">About
+        </a>
+      </li>
+      <li>
+        <a href="a">Contact
+        </a>
+      </li>
+
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+
+  </nav>
+
+  <div id="app">
+    <img src="https://cloud-ahd7o4m5a-hack-club-bot.vercel.app/0image.jpg" />
+
+
+    <section id="event-details-container">
       <h1>NGO Event</h1>
 
-      <p>NGO activities include, but are not limited to, environmental, social, advocacy and human rights work. They can work to promote social or political change on a broad scale or very locally. NGOs play a critical part in developing society, improving communities, and promoting citizen participation</p>
-      
+      <p>NGO activities include, but are not limited to, environmental, social, advocacy and human rights work. They can
+        work to promote social or political change on a broad scale or very locally. NGOs play a critical part in
+        developing society, improving communities, and promoting citizen participation</p>
+
       <p><i class="material-icons">calendar_today</i> March 30</p>
       <p><i class="material-icons">location_city</i> wherever YOU are!
 
-</p>
-      <button id="startRsvp">RSVP</button>
- 
- </section>
+      </p>
+      <button id="startRsvp">Sign in</button>
 
-  <hr>
+    </section>
 
-  <section id="firebaseui-auth-container"></section>
 
-  <section id="description-container">
+    <section id="firebaseui-auth-container"></section>
+
+    <section id="description-container">
       <h2>What we'll be doing</h2>
       <p>Join us for a day full of exciting sustainable development activity!</p>
-  </section>
+      <p id="number-attending"></p>
+    </section>
 
-   <section id="guestbook-container">
-   <h2>Discussion</h2>
+    <section id="guestbook-container">
+      <h2>Are you attending?</h2>
+      <button id="rsvp-yes">YES</button>
+      <button id="rsvp-no">NO</button>
 
-   <form id="leave-message">
-     <label>Leave a message: </label>
-     <input type="text" id="message">
-     <button type="submit">
+      <h2>Discussion</h2>
+
+      <form id="leave-message">
+        <label>Leave a message: </label>
+        <input type="text" id="message">
+        <button type="submit">
        <i class="material-icons">send</i>
        <span>Send</span>
      </button>
-   </form>
-   
-   <section id="guestbook"></section>
+      </form>
 
- </section>
+      <section id="guestbook"></section>
 
-   <img src="https://cdn.dribbble.com/users/1248571/screenshots/15264679/media/f7e7f8d32d0a3577a453a76fa53c41a8.png?compress=1&resize=800x600" />
+    </section>
 
-</div>
+    <div class="pic"> <img
+      src="https://cdn.dribbble.com/users/1248571/screenshots/15264679/media/f7e7f8d32d0a3577a453a76fa53c41a8.png?compress=1&resize=800x600" />
+      <p>
+        An Event which changed my life, well when, I think back on my life there's Many changes for the good and some
+        were
+        bad but, there were some learning experiences that help make me a better person.An Event which changed my life,
+        well when, I think back on my life there's Many changes for the good and some were bad but, there were some
+        learning experiences that help make me a better person.
+      </p>
+    </div>
+
+  </div>
+
+
+  <!-- /////////// Center body ///////////// -->
+
+  <!-- ////////// Upcoming events//////////////////-->
+
+  <body>
+    <!--/////////////// List of events /////////////////-->
+    <div class="upcoming">
+      <h1 align="Center">Upcoming Events</h1>
+    </div>
+
+    <!-- EVENTS IN ORDER -->
+
+    <!-- ////////////////////Image class:To handle images class//////////// -->
+    <table style="margin-top:10px; margin-left:10px;">
+      <div class="imag">
+
+        <!--///events class: to handle individual image // -->
+        <div class="subimage">
+
+          <img src = "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F126252161%2F214483190715%2F1%2Foriginal.20210216-122936?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=965f00af3361f849f7fcbbe8fdf5ec0b" alt = "event 1" width = "10" height="30"/>
+
+        </div>
+
+        <div class="subimage">
+
+          <img src = "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F126818777%2F282776748497%2F1%2Foriginal.20210222-120215?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C120%2C1920%2C960&s=b24dc22625e263e2a7f1130ca4ee4658/" alt = "event 2" width = "10" height = "10">
+
+        </div>
+
+        <div class="subimage">
+
+          <img src = "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F125280699%2F349865644263%2F1%2Foriginal.20210205-154907?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C4500%2C2250&s=72e56d3ea6c909b0e36694c23a9ef32d/" alt = "event 3" width = "10" height= "10">
+
+        </div>
+
+      </div>
+
+
+
+      <!-- ///////////Name of event text class/////////////////// -->
+
+      <div class="name">
+
+
+        <!-- Individual text class -->
+        <div class="subname">
+
+          <p><a
+              href="https://www.eventbrite.com/e/transforming-hr-to-transform-organisations-tickets-141696511079?aff=ebdssbonlinesearch&keep_tld=1">Read
+          </p>
+
+        </div>
+
+        <div class="subname">
+
+          <p><a
+              href="https://www.eventbrite.com/e/route-to-private-equity-cfo-tickets-142097127333?aff=ebdssbonlinesearch&keep_tld=1">Read</a>
+          </p>
+
+        </div>
+
+        <div class="subname">
+
+          <p><a
+              href="https://www.eventbrite.com/e/nice-5-year-strategy-virtual-launch-event-tickets-139419588743?aff=ebdssbonlinesearch&keep_tld=1">Read
+          </p>
+
+        </div>
+      </div>
+
+    </table>
+    </div>
+
+
+  </body>
+
+  </div>
 
 
 
 
 
 </body>
-
