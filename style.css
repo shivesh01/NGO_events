@@ -11,8 +11,6 @@ nav {
   align-items: center;
   min-height: 8vh;
   font-family: "Roboto", sans-serif;
-  margin-right: wrap-content;
-  margin-left: 130px;
 }
 
 .logo {
@@ -186,10 +184,23 @@ button.firebaseui-id-submit.mdl-button--raised.mdl-button--colored {
 *==================================================
 */
 
+/* .body {
+  align-items: center;
+  border: 3px solid green;
+} */
+
 /* Image and side text part */
 .pic {
-  padding-bottom: 100px;
+  padding-bottom: 150px;
   padding-right: 50px;
+  /* border: 3px solid green; */
+}
+
+.center {
+  align-items: auto;
+  padding: auto;
+  margin: auto;
+  width: fit-content;
   /* border: 3px solid green; */
 }
 
@@ -203,7 +214,7 @@ button.firebaseui-id-submit.mdl-button--raised.mdl-button--colored {
 }
 
 /* =========== Images container ========= */
-.imag {
+.imagebox {
   padding-left: 175px;
   overflow: auto;
   /* margin: auto; */
@@ -212,7 +223,8 @@ button.firebaseui-id-submit.mdl-button--raised.mdl-button--colored {
 }
 
 /* ============  Individual images ============*/
-.subimage {
+.subimg {
+  align-items: center;
   margin-right: 100px;
   overflow: auto;
   display: inline-flex;
@@ -249,3 +261,103 @@ a {
   color: #000;
   /*margin: 0 10px 0 0;*/
 }
+
+
+
+
+
+
+/* * ========================================== */
+/* footer css  */
+/* * ========================================== */
+
+.footer {
+  width: 100vw;
+  display: block;
+  overflow: hidden;
+  padding: 70px 0;
+  box-sizing: border-box;
+
+  background-color:rgb(99,102,118);
+}
+.inner_footer {
+  display: block;
+  margin: 0 auto;
+  width: 1100px;
+  height: 100%;
+  /* color: rgb(218, 45, 45); */
+}
+
+.inner_footer .logo_container {
+  width: 15%;
+  float: left;
+  height: 100%;
+  display: block;
+}
+.inner_footer .logo_container img {
+  width: 65px;
+  height: auto;
+}
+
+.inner_footer .footer_third {
+  /* width sizing and margin with logo  */
+  /* copied from website  */
+  width: auto;
+  align-items: left;
+  margin-right: 20px;
+  float: left;
+  height: 100%;
+}
+.inner_footer .footer_third:last-child {
+  margin-right: 0;
+}
+
+.inner_footer .footer_third h1 {
+  font-family: "arial";
+  font-size: 22px;
+  color: white;
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top:0;
+}
+.inner_footer .footer_third a {
+  font-family: "arial";
+  font-size: 18px;
+  color: white;
+  display: block;
+  font-weight: 200;
+  width: 100%;
+  padding-bottom: 5px;
+}
+
+.inner_footer .footer_third_quotes {
+  float: right;
+  margin-right: 20px;
+   /* border: 1px #c9e8fd; */
+}
+.inner_footer .footer_third_quotes h1 {
+  font-family: "gelasio ",serif;
+  font-style: italic;
+  color: white;
+  font-size: 25px;
+  /* border: 1px #c9e8fd; */
+}
+.inner_footer .footer_third_quotes .quoteowner {
+  float: right;
+}
+
+@media (max-width: 800px) {
+  .footer .inner_footer {
+    width: 90%;
+  }
+  .inner_footer .logo_container,
+  .inner_footer .footer_third {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+/* * ========================================== */
+/* footer end  */
+/* * ========================================== */
