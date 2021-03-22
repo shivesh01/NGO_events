@@ -1,20 +1,65 @@
-@media all and (min-width:1200px){
-  #app{
+/* added nav bar*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  font-family: "Roboto", sans-serif;
+  margin-right: wrap-content;
+  margin-left: 130px;
+}
+
+.logo {
+  text-transform: uppercase;
+  color: black;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* nav bar ending */
+
+/* body */
+@media all and (min-width: 1200px) {
+  #app {
     max-width: 1000px;
     margin: 0 auto;
   }
 }
 @media all and (min-width: 960px) and (max-width: 1199px) {
-  #app{
+  #app {
     max-width: 900px;
     margin: 0 auto;
   }
 }
 
 @media all and (max-width: 599px) {
-  img{
-    width:100%;
-    height:200px;
+  img {
+    width: 100%;
+    height: 200px;
     object-fit: cover;
   }
 }
@@ -24,19 +69,19 @@
     clear: both;
     display: block;
   }
-  #event-details-container{
+  #event-details-container {
     clear: none;
   }
-  img{
-    width:60%;
-    height:300px;
+  img {
+    width: 60%;
+    height: 300px;
     float: left;
     border-radius: 8px;
     object-fit: cover;
     margin-right: 20px;
     margin-left: 20px;
     margin-bottom: 20px;
- }
+  }
 }
 
 hr {
@@ -55,15 +100,16 @@ section {
 
 body {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
-    min-height: 110vh;
-    background-color: #C9E8FD;
-    
-
+  font-family: "Open Sans", sans-serif;
+  min-height: 110vh;
+  background-color: #c9e8fd;
 }
 
-h1, h2, h3, p {
-  font-family: 'Roboto', sans-serif;
+h1,
+h2,
+h3,
+p {
+  font-family: "Roboto", sans-serif;
   font-weight: normal;
 }
 
@@ -75,14 +121,14 @@ h2 {
   margin-bottom: 0px;
 }
 
-label{
+label {
   font-size: 18px;
 }
 
 p {
   font-size: 18px;
-  margin-top:10px;
-  margin-bottom:0px;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 #guestbook > p {
@@ -90,9 +136,9 @@ p {
   font-size: 14px;
 }
 
-input{
+input {
   border: none;
-  border-bottom: 1px solid rgba(0,0,0,.12);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
   font-size: 14px;
   padding: 4px 0;
   background: 0 0;
@@ -100,210 +146,106 @@ input{
   color: inherit;
 }
 
-button.clicked{
+button.clicked {
   background-color: rgb(60, 67, 154);
   border-color: rgb(60, 67, 154);
   color: white;
   outline-color: rgb(60, 67, 154);
 }
 
-button, button.firebaseui-id-submit.mdl-button--raised.mdl-button--colored{
-align-items: center;
-background-color: rgba(0, 0, 0, 0);
-border-color: rgb(60, 67, 154);
-border-radius: 4px;
-border-style: solid;
-border-width: 1px;
-box-shadow: none;
-color: rgb(60, 67, 154);
-cursor: default;
-display: inline-flex;
-font-family: Roboto, sans-serif;
-font-size: 14px;
-font-weight: bold;
-height: 36px;
-justify-content: center;
-margin: 8px 16px;
-outline-color: rgb(60, 67, 154);
-overflow: hidden;
-padding: 0px 15px;
-position: relative;
-text-align: center;
-text-transform: uppercase;
-vertical-align: middle;
+button,
+button.firebaseui-id-submit.mdl-button--raised.mdl-button--colored {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgb(60, 67, 154);
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: none;
+  color: rgb(60, 67, 154);
+  cursor: default;
+  display: inline-flex;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  height: 36px;
+  justify-content: center;
+  margin: 8px 16px;
+  outline-color: rgb(60, 67, 154);
+  overflow: hidden;
+  padding: 0px 15px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
 }
+/* body ending */
 
-
-/*
- adding Navigation bar
- */
- /*
-*
-* ==========================================
-* CUSTOM UTIL CLASSES
-* ==========================================
-*
+/* ================================================
+#   CENTERAL BODY
+*==================================================
 */
-.navbar {
-    transition: all 0.4s;
+
+/* Image and side text part */
+.pic {
+  padding-bottom: 100px;
+  padding-right: 50px;
+  /* border: 3px solid green; */
 }
 
-.navbar .nav-link {
-    color: #fff;
+/* ============ Upcoming hading =================*/
+.upcoming {
+  /* margin-top: 200px; */
+  padding: 20px;
+  overflow: auto;
+  /* border: 3px solid green; */
+  text-align: left;
 }
 
-.navbar .nav-link:hover,
-.navbar .nav-link:focus {
-    color: #fff;
-    text-decoration: none;
+/* =========== Images container ========= */
+.imag {
+  padding-left: 175px;
+  overflow: auto;
+  /* margin: auto; */
+  width: auto;
+  /* border: 3px solid blue; */
 }
 
-.navbar .navbar-brand {
-    color: #fff;
+/* ============  Individual images ============*/
+.subimage {
+  margin-right: 100px;
+  overflow: auto;
+  display: inline-flex;
+  width: 24%;
+  /* height: ; */
+  /* padding: 20px; */
+  /* border: 3px solid yellow; */
 }
 
-
-/* Change navbar styling on scroll */
-.navbar.active {
-    background: #fff;
-    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+/* ================= text Container=============== */
+.name {
+  display: inline-flex;
+  padding-left: 185px;
+  overflow: auto;
+  /* margin: auto; */
+  width: auto;
+  /* border: 3px solid black; */
 }
 
-.navbar.active .nav-link {
-    color: #555;
+/* ================ Individual text ==================== */
+.subname {
+  padding: 5px;
+  text-align: center;
+  overflow: auto;
+  margin-right: 340px;
+  /* margin-inline-end: 270px; */
+  width: auto;
+  /* border: 3px solid red; */
+  /* background-color: grey; */
 }
 
-.navbar.active .nav-link:hover,
-.navbar.active .nav-link:focus {
-    color: #555;
-    text-decoration: none;
-}
-
-.navbar.active .navbar-brand {
-    color: #555;
-}
-
-
-/* Change navbar styling on small viewports */
-@media (max-width: 991.98px) {
-    .navbar {
-        background: #fff;
-    }
-
-    .navbar .navbar-brand, .navbar .nav-link {
-        color: #555;
-    }
-}
-
-
-
-/*
-*
-* ==========================================
-* CUSTOM UTIL CLASSES
-* ==========================================
-*
-*/
-.navbar {
-    transition: all 0.4s;
-}
-
-.navbar .nav-link {
-    color: #fff;
-}
-
-.navbar .nav-link:hover,
-.navbar .nav-link:focus {
-    color: #fff;
-    text-decoration: none;
-}
-
-.navbar .navbar-brand {
-    color: #fff;
-}
-
-
-/* Change navbar styling on scroll */
-.navbar.active {
-    background: #fff;
-    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.navbar.active .nav-link {
-    color: #555;
-}
-
-.navbar.active .nav-link:hover,
-.navbar.active .nav-link:focus {
-    color: #555;
-    text-decoration: none;
-}
-
-.navbar.active .navbar-brand {
-    color: #555;
-}
-
-
-/* Change navbar styling on small viewports */
-@media (max-width: 991.98px) {
-    .navbar {
-        background: #fff;
-    }
-
-    .navbar .navbar-brand, .navbar .nav-link {
-        color: #555;
-    }
-}
-
-
-
-/*
-*
-* ==========================================
-* FOR DEMO PURPOSES
-* ==========================================
-*
-*/
-.text-small {
-    font-size: 0.9rem !important;
-}
-
-
-body {
-    min-height: 110vh;
-    background-color: #C9E8FD;
-    
-}
-
-
-
-/* Change navbar styling on small viewports */
-@media (max-width: 991.98px) {
-    .navbar {
-        background: #fff;
-    }
-
-    .navbar .navbar-brand, .navbar .nav-link {
-        color: #555;
-    }
-}
-
-
-
-/*
-*
-* ==========================================
-* FOR DEMO PURPOSES
-* ==========================================
-*
-*/
-.text-small {
-    font-size: 0.9rem !important;
-}
-
-
-body {
-    min-height: 110vh;
-    background-color: #C9E8FD;
-    
+/*Color of links*/
+a {
+  color: #000;
+  /*margin: 0 10px 0 0;*/
 }
