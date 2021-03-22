@@ -2,7 +2,8 @@
   <meta charset="utf-8">
   <title>Firebase Meetup</title>
   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/4.0.0/firebaseui.css" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:300,400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:300,400,700&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -10,97 +11,226 @@
 <body>
 
 
-  
+  <div id="app">
 
-<div id="app">
-
-  <nav>
-      <div class= "logo">
+    <nav>
+      <div class="logo">
         <h4>Sustainable NGOs</h4>
       </div>
       <ul class="nav-links">
         <li>
-          <a href = "a">Home</a>
+          <a href="a">Home</a>
         </li>
         <li>
-          <a
-           href = "a">About
+          <a href="a">About
           </a>
         </li>
         <li>
-          <a href = "a">Contact
+          <a href="a">Contact
           </a>
         </li>
-        
+
       </ul>
       <div class="burger">
-      <div class="line1"></div>
-      <div class="line2"></div>
-      <div class="line3"></div>
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
       </div>
 
     </nav>
 
-  <img src="https://cloud-ahd7o4m5a-hack-club-bot.vercel.app/0image.jpg" />
+    <img src="https://cloud-ahd7o4m5a-hack-club-bot.vercel.app/0image.jpg" />
 
 
-
-  
- <section id="event-details-container">
+    <section id="event-details-container">
       <h1>NGO Event</h1>
 
-      <p>NGO activities include, but are not limited to, environmental, social, advocacy and human rights work. They can work to promote social or political change on a broad scale or very locally. NGOs play a critical part in developing society, improving communities, and promoting citizen participation</p>
-      
+      <p>NGO activities include, but are not limited to, environmental, social, advocacy and human rights work. They can
+        work to promote social or political change on a broad scale or very locally. NGOs play a critical part in
+        developing society, improving communities, and promoting citizen participation</p>
+
       <p><i class="material-icons">calendar_today</i> March 30</p>
       <p><i class="material-icons">location_city</i> wherever YOU are!
 
-</p>
+      </p>
       <button id="startRsvp">Sign in</button>
- 
- </section>
+
+    </section>
 
 
-  <section id="firebaseui-auth-container"></section>
+    <section id="firebaseui-auth-container"></section>
 
-  <section id="description-container">
+    <section id="description-container">
       <h2>What we'll be doing</h2>
       <p>Join us for a day full of exciting sustainable development activity!</p>
-        <p id="number-attending"></p>
-  </section>
+      <p id="number-attending"></p>
+    </section>
 
-   <section id="guestbook-container">
-     <h2>Are you attending?</h2>
-     <button id="rsvp-yes">YES</button>
-     <button id="rsvp-no">NO</button>
+    <section id="guestbook-container">
+      <h2>Are you attending?</h2>
+      <button id="rsvp-yes">YES</button>
+      <button id="rsvp-no">NO</button>
 
-   <h2>Discussion</h2>
+      <h2>Discussion</h2>
 
-   <form id="leave-message">
-     <label>Leave a message: </label>
-     <input type="text" id="message">
-     <button type="submit">
+      <form id="leave-message">
+        <label>Leave a message: </label>
+        <input type="text" id="message">
+        <button type="submit">
        <i class="material-icons">send</i>
        <span>Send</span>
      </button>
-   </form>
-   
-   <section id="guestbook"></section>
+      </form>
 
- </section>
+      <section id="guestbook"></section>
 
-   <img src="https://cdn.dribbble.com/users/1248571/screenshots/15264679/media/f7e7f8d32d0a3577a453a76fa53c41a8.png?compress=1&resize=800x600" />
-   <p>
-     An Event which changed my life, well when, I think back on my life there's Many changes for the good and some were bad but, there were some learning experiences that help make me a better person.An Event which changed my life, well when, I think back on my life there's Many changes for the good and some were bad but, there were some learning experiences that help make me a better person.
-   </p>
+    </section>
 
-    
+    <div class="pic"> <img
+      src="https://cdn.dribbble.com/users/1248571/screenshots/15264679/media/f7e7f8d32d0a3577a453a76fa53c41a8.png?compress=1&resize=800x600" />
+      <p>
+        An Event which changed my life, well when, I think back on my life there's Many changes for the good and some
+        were
+        bad but, there were some learning experiences that help make me a better person.An Event which changed my life,
+        well when, I think back on my life there's Many changes for the good and some were bad but, there were some
+        learning experiences that help make me a better person.
+      </p>
 
-</div>
 
 
+    </div>
+
+  </div>
+
+
+  <!-- /////////// Center body ///////////// -->
+
+  <!-- ////////// Upcoming events//////////////////-->
+
+
+  <!--/////////////// List of events /////////////////-->
+  <div class="upcoming">
+    <h1 align="Center">Upcoming Events</h1>
+  </div>
+
+  <!-- EVENTS IN ORDER -->
+
+  <div class="center">
+    <!-- ////////////////////Image class:To handle images class//////////// -->
+    <table style="margin-top:10px; margin-left:10px;">
+      <div class="imagebox">
+
+        <!--///events class: to handle individual image // -->
+        <div class="subimg">
+
+          <img src = "https://media.istockphoto.com/vectors/heart-hands-vector-id1091189616?k=6&m=1091189616&s=612x612&w=0&h=IqeqPP6nAs2oI0UBKX-UcFGvdzKvEyoBX3YiELeBobE=" alt = "event 1" width = "10" height="30"/>
+
+        </div>
+
+        <div class="subimg">
+
+          <img src = "https://media.istockphoto.com/vectors/human-hand-with-pet-paw-print-vector-id1180800356?k=6&m=1180800356&s=612x612&w=0&h=xdAQnZ7HzU_sNmGX_aix1zNaODBzpPG-hPjxcAPx8YU=" alt = "event 2" width = "10" height = "10">
+
+        </div>
+
+        <div class="subimg">
+
+          <img src = "https://media.istockphoto.com/vectors/food-donations-color-icon-charity-food-collection-box-with-meal-vector-id1208586170?k=6&m=1208586170&s=612x612&w=0&h=NdkOD7C1BuA0i2gsMWxrL3QMKMBN14Q1TjUQEvC4lrs=" alt = "event 3" width = "10" height= "10">
+
+        </div>
+
+      </div>
+
+
+
+      <!-- ///////////Name of event text class/////////////////// -->
+
+      <div class="name">
+
+
+        <!-- Individual text class -->
+        <div class="subname">
+
+          <p><a
+              href="https://www.eventbrite.com/e/transforming-hr-to-transform-organisations-tickets-141696511079?aff=ebdssbonlinesearch&keep_tld=1">Read
+          </p>
+
+        </div>
+
+        <div class="subname">
+
+          <p><a
+              href="https://www.eventbrite.com/e/route-to-private-equity-cfo-tickets-142097127333?aff=ebdssbonlinesearch&keep_tld=1">Read</a>
+          </p>
+
+        </div>
+
+        <div class="subname">
+
+          <p><a
+              href="https://www.eventbrite.com/e/nice-5-year-strategy-virtual-launch-event-tickets-139419588743?aff=ebdssbonlinesearch&keep_tld=1">Read</a>
+          </p>
+
+        </div>
+      </div>
+
+    </table>
+  </div>
+
+
+  </center>
+
+  </div>
+
+
+
+  <br>
+  <br>
+  <br>
+
+
+
+
+  <!-- footer section commit by yash  -->
+  <footer>
+    <div class="footer">
+      <div class="inner_footer">
+        <!-- logo position and logo_container -->
+
+        <div class="logo_container">
+          <img
+            src="https://cdn.jsdelivr.net/gh/yashladekar/firebase-gtk-web-checkpoint4-nbxk6l@master/image/logo1.png"
+          />
+        </div>
+
+        <!-- content of footer block -->
+        <!-- first element block -->
+
+        <div class="footer_third">
+          <h1>Need Help?</h1>
+          <a> contact us</a>
+          <!-- <a href="#"> hackclub@gmail.com </a> -->
+          <a href="mailto:hackclubpunecity@gmail.com?subject=Suggestion&">hackclubpunecity@gmail.com</a>
+        </div>
+
+        <div class="footer_third_quotes">
+          <h1>
+            <blockquote class="blockquote">
+              <q> The journey of a thousand miles begins with one step.</q>
+              <p>
+              <div class="quoteowner">
+                ~ Lao Tzu
+              </div>
+              </p>
+            </blockquote>
+          </h1>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- footer section  -->
 
 
 
 
 </body>
-
