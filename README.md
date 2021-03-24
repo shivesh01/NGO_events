@@ -1,5 +1,4 @@
-# Getting started
-
+# Getting started 
 
 ### Project demo in stack blitz 
 ![](https://github.com/shivesh01/firebase-gtk-web-checkpoint4-bwf6db/blob/master/Images/Img.png)
@@ -15,3 +14,14 @@
 
 
 
+
+
+
+<!--- changes getting started  --->
+<!--- Working demo Gif: 
+
+Code on stack blitz:  
+
+
+// Video Demo link:
+---> 
