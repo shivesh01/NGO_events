@@ -8,7 +8,7 @@
 
 ### Code: [Link⚡️](https://stackblitz.com/edit/firebase-gtk-web-checkpoint4-yyzdzr?file=index.html)
 
-### Site: [Link🤝](https://firebase-gtk-web-checkpoint4-yyzdzr.stackblitz.io/)
+### Website: [Link🤝](https://firebase-gtk-web-checkpoint4-yyzdzr.stackblitz.io/)
 
 
 
