@@ -14,10 +14,4 @@
 [website link](https://firebase-gtk-web-checkpoint4-yyzdzr.stackblitz.io/)
 
 
-//### Working demo Gif: 
-
-
-
-
-//### Video Demo link:
 
