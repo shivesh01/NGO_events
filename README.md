@@ -1,16 +1,14 @@
 # Getting started 
 
-### Project demo in stack blitz 
-![](https://github.com/shivesh01/firebase-gtk-web-checkpoint4-bwf6db/blob/master/Images/Img.png)
+### Project Demo
+![How to run](https://github.com/shivesh01/firebase-gtk-web-checkpoint4-bwf6db/blob/master/Images/Img.png)
 
 ### Click on run this project
-![](https://github.com/shivesh01/firebase-gtk-web-checkpoint4-bwf6db/blob/master/Images/img2.png)
+![Preview of project NGO event site](https://github.com/shivesh01/firebase-gtk-web-checkpoint4-bwf6db/blob/master/Images/img2.png)
 
-### Code
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/firebase-gtk-web-checkpoint4-yyzdzr?file=index.html)
+### Code: [Link⚡️](https://stackblitz.com/edit/firebase-gtk-web-checkpoint4-yyzdzr?file=index.html)
 
-### Website
-[website link](https://firebase-gtk-web-checkpoint4-yyzdzr.stackblitz.io/)
+### Website: [Link](https://firebase-gtk-web-checkpoint4-yyzdzr.stackblitz.io/)
 
 
 
