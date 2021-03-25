@@ -3,10 +3,15 @@
   <title>Firebase Meetup</title>
   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/4.0.0/firebaseui.css" />
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;1,100&family=Open+Sans&display=swap');
-</style>
-  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;1,100&family=Open+Sans&display=swap');
+  </style>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+  </style>
+
+
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -18,25 +23,24 @@
 
     <nav>
       <div class="logo">
-        <h4>Sustainable NGOs</h4>
+        <h4 style="color: rgb(60, 67, 154);" ; font-size: 100;>Sustainable NGOs</h4>
       </div>
       <ul class="nav-links">
-     
+
         <li>
-          <a href="https://www.canva.com/design/DAEZqlYKbUo/2zphegfAoUbTrfHg2TuWXw/view?website#2:ngo-events">About
+          <a href="https://www.canva.com/design/DAEZqlYKbUo/2zphegfAoUbTrfHg2TuWXw/view?website#2:content-lead">
+            <button>About
+          </button>
           </a>
+
         </li>
         <li>
-          <a href="a">Contact
+          <a href="mailto:hackclubpunecity@gmail.com?subject=Suggestion&"><button>Contact</button></a>
           </a>
         </li>
 
       </ul>
-      <div class="burger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
+
 
     </nav>
 
@@ -46,13 +50,16 @@
     <section id="event-details-container">
       <h2>Ongoing Event</h2>
 
-      <p style="text-align:justify">NGO activities include, but are not limited to, environmental, social, advocacy and human rights work. They can work to promote social or political change on a broad scale or very locally. NGOs play a critical part in
-        developing society, improving communities, and promoting citizen participation. See you all in our event. Make this event great and make a better world.</p>
-        <br>
-        <br>
+      <p style="text-align:justify">NGO activities include, but are not limited to, environmental, social, advocacy and
+        human rights work. They can work to promote social or political change on a broad scale or very locally. NGOs
+        play a critical part in
+        developing society, improving communities, and promoting citizen participation. See you all in our event. Make
+        this event great and make a better world.</p>
+      <br>
+      <br>
       <p><i class="material-icons">calendar_today</i> March 30
       </p>
-      <p><i class="material-icons">location_city</i> wherever YOU are!
+      <p><i class="material-icons">location_city</i> Wherever YOU are!
       </p>
       <button id="startRsvp">Sign in</button>
 
@@ -89,7 +96,7 @@
 
     <div class="pic"> <img
       src="https://cdn.dribbble.com/users/1248571/screenshots/15264679/media/f7e7f8d32d0a3577a453a76fa53c41a8.png?compress=1&resize=800x600" />
-      <p >
+      <p>
         An Event which changed my life, well when, I think back on my life there's Many changes for the good and some
         were
         bad but, there were some learning experiences that help make me a better person.An Event which changed my life,
@@ -123,26 +130,38 @@
 
       <!--///events class: to handle individual image // -->
       <div class="subimg">
-        <a
-          href="https://en.unesco.org/themes/women-s-and-girls-education/prize#:~:text=The%20UNESCO%20Prize%20for%20Girls,advance%20girls'%20and%20women's%20education.&text=The%20Director-General%20of%20UNESCO,the%20first%20time%20in%202016">
+        <a href="https://www.birac.nic.in/desc_new.php?id=838">
           <img src="https://media.istockphoto.com/vectors/heart-hands-vector-id1091189616?k=6&m=1091189616&s=612x612&w=0&h=IqeqPP6nAs2oI0UBKX-UcFGvdzKvEyoBX3YiELeBobE="
             alt="event 1" style="width:200px;height:200px;">
+          <br>
+          <br>
+          <br>
+          <b>Applications Invited for BIRAC TiE WInER (Women in Entrepreneurial Research) Award 2021</b>
 
         </a>
 
       </div>
 
       <div class="subimg">
-        <a href="https://www.thehabitatstrust.org/grants/">
+        <a href="https://www.photocrowd.com/photo-competitions/photography-awards/pa2faward-2021/#section-1533">
           <img src = "https://media.istockphoto.com/vectors/human-hand-with-pet-paw-print-vector-id1180800356?k=6&m=1180800356&s=612x612&w=0&h=xdAQnZ7HzU_sNmGX_aix1zNaODBzpPG-hPjxcAPx8YU=" alt = "event 2" style="width:200px;height:200px;">
+          <br>
+          <br>
+          <br>
+          <b>Applications Invited for Environmental Photography Award 2021</b>
         </a>
 
       </div>
 
       <div class="subimg">
 
-        <a href="https://www.gchera.com/world-agriculture-prize.html">
+        <a href="https://sfiar.ch/award.htm">
           <img src = "https://media.istockphoto.com/vectors/food-donations-color-icon-charity-food-collection-box-with-meal-vector-id1208586170?k=6&m=1208586170&s=612x612&w=0&h=NdkOD7C1BuA0i2gsMWxrL3QMKMBN14Q1TjUQEvC4lrs=" alt = "event 3" style="width:200px;height:200px;"/>
+
+          <br>
+          <br>
+          <br>
+          <b>Applications Invited for Swiss Forum for International Agricultural Research Award 2021</b>
 
         </a>
 
@@ -154,15 +173,9 @@
 
   </div>
 
-
-
-
   <br>
   <br>
   <br>
-
-
-
 
   <!-- footer section commit by yash  -->
   <footer>
@@ -180,10 +193,13 @@
         <!-- first element block -->
 
         <div class="footer_third">
-          <h1>Need Help?</h1>
-          <a> contact us</a>
+          <p>Get in touch with us</p>
+
           <!-- <a href="#"> hackclub@gmail.com </a> -->
-          <a href="mailto:hackclubpunecity@gmail.com?subject=Suggestion&">hackclubpunecity@gmail.com</a>
+          <button>
+          <a href="mailto:hackclubpunecity@gmail.com?subject=Suggestion&"/>
+            contact us
+          </button>
         </div>
 
         <div class="footer_third_quotes">
@@ -202,9 +218,5 @@
     </div>
   </footer>
   <!-- footer section  -->
-
-
-
-
 
 </body>
