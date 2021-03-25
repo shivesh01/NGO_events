@@ -1,208 +1,323 @@
-<head>
-  <meta charset="utf-8">
-  <title>Firebase Meetup</title>
-  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/4.0.0/firebaseui.css" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:300,400,700&display=swap"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+/* added nav bar*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.logo {
+  text-transform: uppercase;
+  color: black;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+   width: 30%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  letter-spacing: 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* nav bar ending */
+
+/* body */
+@media all and (min-width: 1200px) {
+  #app {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+@media all and (min-width: 960px) and (max-width: 1199px) {
+  #app {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
+
+@media all and (max-width: 599px) {
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
+@media all and (min-width: 600px) {
+  section {
+    clear: both;
+    display: block;
+  }
+  #event-details-container {
+    clear: none;
+  }
+  img {
+    width: 60%;
+    height: 300px;
+    float: left;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+hr {
+  clear: both;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+section {
+  margin: 20px;
+}
+
+.material-icons {
+  padding-right: 10px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 110vh;
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(255, 255, 255);
+}
+
+h1,
+h2,
+h3,
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  margin-bottom: 0px;
+}
+
+label {
+  font-size: 18px;
+}
+
+p {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+#guestbook > p {
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  font-size: 14px;
+  padding: 4px 0;
+  background: 0 0;
+  text-align: left;
+  color: inherit;
+}
+
+button.clicked {
+  background-color: rgb(60, 67, 154);
+  border-color: rgb(60, 67, 154);
+  color: white;
+  outline-color: rgb(60, 67, 154);
+}
+
+button,
+button.firebaseui-id-submit.mdl-button--raised.mdl-button--colored {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgb(60, 67, 154);
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: none;
+  color: rgb(60, 67, 154);
+  cursor: default;
+  display: inline-flex;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  height: 36px;
+  justify-content: center;
+  margin: 8px 16px;
+  outline-color: rgb(60, 67, 154);
+  overflow: hidden;
+  padding: 0px 15px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+/* body ending */
+
+/* ================================================
+#   CENTERAL BODY
+*==================================================
+*/
+
+/* Image and side text part */
+.pic {
+  padding-bottom: 120px;
+  padding-right: 50px;
+  /* border: 3px solid green; */
+}
+
+/* ============ Upcoming hading =================*/
+.upcoming {
+  padding: 40px;
+  overflow: auto;
+  /* border: 3px solid green; */
+  text-align: center;
+}
+
+/* =========== Images container ========= */
+.imagebox {
+  overflow: auto;
+  width: auto;
+  /* border: 3px solid blue; */
+}
+
+/* ============  Individual images ============*/
+.subimg {
+  align-items: center;
+  margin-right: 80px;
+  overflow: auto;
+  display: inline-flex;
+  /* border: 3px solid yellow; */
+}
+
+/* * ========================================== */
+/* footer css  */
+/* * ========================================== */
+
+.footer {
+  width: 100vw;
+  display: block;
+  overflow: hidden;
+  padding: 70px 0;
+  box-sizing: border-box;
+
+  background-color: rgb(248,249,250);
+}
+.inner_footer {
+  display: block;
+  margin: 0 auto;
+  width: 1100px;
+  height: 100%;
+  /* color: rgb(218, 45, 45); */
+}
+
+.inner_footer .logo_container {
+  width: 15%;
+  float: left;
+  height: 100%;
+  display: block;
+}
+.inner_footer .logo_container img {
+  width: 65px;
+  height: auto;
+}
+
+.inner_footer .footer_third {
+  /* width sizing and margin with logo  */
+  /* copied from website  */
+  width: auto;
+  align-items: left;
+  margin-right: 20px;
+  float: left;
+  height: 100%;
+}
+.inner_footer .footer_third:last-child {
+  margin-right: 0;
+}
+
+.inner_footer .footer_third h1 {
+  font-family: "arial";
+  font-size: 22px;
+  color: #202124;
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+.inner_footer .footer_third a {
+  font-family: "arial";
+  font-size: 18px;
+  color: #202124;
+  display: block;
+  font-weight: 200;
+  width: 100%;
+  padding-bottom: 5px;
+}
+
+.inner_footer .footer_third_quotes {
+  float: right;
+  margin-right: 20px;
+  /* border: 1px #c9e8fd; */
+}
+.inner_footer .footer_third_quotes h1 {
+  font-family: "gelasio ", serif;
+  font-style: italic;
+  color: #202124;
+  font-size: 25px;
+  /* border: 1px #c9e8fd; */
+}
+.inner_footer .footer_third_quotes .quoteowner {
+  float: right;
+}
+
+@media (max-width: 800px) {
+  .footer .inner_footer {
+    width: 90%;
+  }
+  .inner_footer .logo_container,
+  .inner_footer .footer_third {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+/* * ========================================== */
+/* footer end  */
+/* * ========================================== */
+
+
+/* font addition */
 
-<body>
-
-
-  <div id="app">
-
-    <nav>
-      <div class="logo">
-        <h4>Sustainable NGOs</h4>
-      </div>
-      <ul class="nav-links">
-        <li>
-          <a href="a">Home</a>
-        </li>
-        <li>
-          <a href="a">About
-          </a>
-        </li>
-        <li>
-          <a href="a">Contact
-          </a>
-        </li>
-
-      </ul>
-      <div class="burger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
-
-    </nav>
-
-    <img src="https://cloud-ahd7o4m5a-hack-club-bot.vercel.app/0image.jpg" />
-
-
-    <section id="event-details-container">
-      <h1>NGO Event</h1>
-
-      <p>NGO activities include, but are not limited to, environmental, social, advocacy and human rights work. They can
-        work to promote social or political change on a broad scale or very locally. NGOs play a critical part in
-        developing society, improving communities, and promoting citizen participation</p>
-
-      <p><i class="material-icons">calendar_today</i> March 30</p>
-      <p><i class="material-icons">location_city</i> wherever YOU are!
-
-      </p>
-      <button id="startRsvp">Sign in</button>
-
-    </section>
-
-
-    <section id="firebaseui-auth-container"></section>
-
-    <section id="description-container">
-      <h2>What we'll be doing</h2>
-      <p>Join us for a day full of exciting sustainable development activity!</p>
-      <p id="number-attending"></p>
-    </section>
-
-    <section id="guestbook-container">
-      <h2>Are you attending?</h2>
-      <button id="rsvp-yes">YES</button>
-      <button id="rsvp-no">NO</button>
-
-      <h2>Discussion</h2>
-
-      <form id="leave-message">
-        <label>Leave a message: </label>
-        <input type="text" id="message">
-        <button type="submit">
-       <i class="material-icons">send</i>
-       <span>Send</span>
-     </button>
-      </form>
-
-      <section id="guestbook"></section>
-
-    </section>
-
-    <div class="pic"> <img
-      src="https://cdn.dribbble.com/users/1248571/screenshots/15264679/media/f7e7f8d32d0a3577a453a76fa53c41a8.png?compress=1&resize=800x600" />
-      <p>
-        An Event which changed my life, well when, I think back on my life there's Many changes for the good and some
-        were
-        bad but, there were some learning experiences that help make me a better person.An Event which changed my life,
-        well when, I think back on my life there's Many changes for the good and some were bad but, there were some
-        learning experiences that help make me a better person.
-      </p>
-
-
-
-    </div>
-
-  </div>
-
-
-  <!-- /////////// Center body ///////////// -->
-
-  <!-- ////////// Upcoming events//////////////////-->
-
-  <div id="app">
-
-    <div class="upcoming">
-      <h1 align="Center">Upcoming Events</h1>
-    </div>
-
-    <!-- EVENTS -->
-
-
-    <!-- ////////////////////imagebox class:To handle images class//////////// -->
-
-    <div class="imagebox">
-
-      <!--///events class: to handle individual image // -->
-      <div class="subimg">
-        <a
-          href="https://en.unesco.org/themes/women-s-and-girls-education/prize#:~:text=The%20UNESCO%20Prize%20for%20Girls,advance%20girls'%20and%20women's%20education.&text=The%20Director-General%20of%20UNESCO,the%20first%20time%20in%202016">
-          <img src="https://media.istockphoto.com/vectors/heart-hands-vector-id1091189616?k=6&m=1091189616&s=612x612&w=0&h=IqeqPP6nAs2oI0UBKX-UcFGvdzKvEyoBX3YiELeBobE="
-            alt="event 1" style="width:200px;height:200px;">
-
-        </a>
-
-      </div>
-
-      <div class="subimg">
-        <a href="https://www.thehabitatstrust.org/grants/">
-          <img src = "https://media.istockphoto.com/vectors/human-hand-with-pet-paw-print-vector-id1180800356?k=6&m=1180800356&s=612x612&w=0&h=xdAQnZ7HzU_sNmGX_aix1zNaODBzpPG-hPjxcAPx8YU=" alt = "event 2" style="width:200px;height:200px;">
-        </a>
-
-      </div>
-
-      <div class="subimg">
-
-        <a href="https://www.gchera.com/world-agriculture-prize.html">
-          <img src = "https://media.istockphoto.com/vectors/food-donations-color-icon-charity-food-collection-box-with-meal-vector-id1208586170?k=6&m=1208586170&s=612x612&w=0&h=NdkOD7C1BuA0i2gsMWxrL3QMKMBN14Q1TjUQEvC4lrs=" alt = "event 3" style="width:200px;height:200px;"/>
-
-        </a>
-
-      </div>
-
-    </div>
-
-
-
-  </div>
-
-
-
-
-  <br>
-  <br>
-  <br>
-
-
-
-
-  <!-- footer section commit by yash  -->
-  <footer>
-    <div class="footer">
-      <div class="inner_footer">
-        <!-- logo position and logo_container -->
-
-        <div class="logo_container">
-          <img
-            src="https://cdn.jsdelivr.net/gh/yashladekar/firebase-gtk-web-checkpoint4-nbxk6l@master/image/logo1.png"
-          />
-        </div>
-
-        <!-- content of footer block -->
-        <!-- first element block -->
-
-        <div class="footer_third">
-          <h1>Need Help?</h1>
-          <a> contact us</a>
-          <!-- <a href="#"> hackclub@gmail.com </a> -->
-          <a href="mailto:hackclubpunecity@gmail.com?subject=Suggestion&">hackclubpunecity@gmail.com</a>
-        </div>
-
-        <div class="footer_third_quotes">
-          <h1>
-            <blockquote class="blockquote">
-              <q> The journey of a thousand miles begins with one step.</q>
-              <p>
-              <div class="quoteowner">
-                ~ Lao Tzu
-              </div>
-              </p>
-            </blockquote>
-          </h1>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!-- footer section  -->
-
-
-
-
-</body>
