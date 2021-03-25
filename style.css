@@ -10,21 +10,22 @@ nav {
   justify-content: space-around;
   align-items: center;
   min-height: 8vh;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .logo {
   text-transform: uppercase;
   color: black;
   letter-spacing: 2px;
-  font-size: 20px;
+  font-size: 30px;
+  border-color: rgb(60, 67, 154);
 }
 
 .nav-links {
   display: flex;
   justify-content: space-around;
   font-weight: bold;
-   width: 30%;
+  width: 30%;
 }
 
 .nav-links li {
@@ -99,23 +100,23 @@ section {
 
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   min-height: 110vh;
-    background-image: initial;
-    background-position-x: initial;
-    background-position-y: initial;
-    background-size: initial;
-    background-attachment: initial;
-    background-origin: initial;
-    background-clip: initial;
-    background-color: rgb(255, 255, 255);
+  background-image: initial;
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: rgb(255, 255, 255);
 }
 
 h1,
 h2,
 h3,
 p {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: normal;
 }
 
@@ -125,6 +126,10 @@ h1 {
 
 h2 {
   margin-bottom: 0px;
+}
+
+h4 {
+  font-family: "Archivo Black", sans-serif;
 }
 
 label {
@@ -170,7 +175,7 @@ button.firebaseui-id-submit.mdl-button--raised.mdl-button--colored {
   box-shadow: none;
   color: rgb(60, 67, 154);
   cursor: default;
-  display: inline-flex;
+  /* display: inline-flex; */
   font-family: Roboto, sans-serif;
   font-size: 14px;
   font-weight: bold;
@@ -233,8 +238,7 @@ button.firebaseui-id-submit.mdl-button--raised.mdl-button--colored {
   overflow: hidden;
   padding: 70px 0;
   box-sizing: border-box;
-
-  background-color: rgb(248,249,250);
+  background-color: rgb(248, 249, 250);
 }
 .inner_footer {
   display: block;
@@ -318,6 +322,4 @@ button.firebaseui-id-submit.mdl-button--raised.mdl-button--colored {
 /* footer end  */
 /* * ========================================== */
 
-
-/* font addition */
-
+/* spaces problem*/
