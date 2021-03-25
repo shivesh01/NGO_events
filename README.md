@@ -6,9 +6,9 @@
 ### Click on run this project
 ![Preview of project NGO event site](https://github.com/shivesh01/NGO_events/blob/master/images/How%20to%20Run%20project.png)
 
-### Code: [Link⚡️](https://stackblitz.com/edit/ngo-events)
+### Code: [Link⚡️](https://stackblitz.com/edit/ngo-events-1gqb2t?file=index.html)
 
-### Website: [Link](https://web-codelab-a5b4d.firebaseapp.com/?35306)
+### Website: [Link](https://ngo-events-1gqb2t.stackblitz.io/)
 
 
 
