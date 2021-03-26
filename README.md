@@ -1,7 +1,7 @@
 # Getting started 
 
 ### Project Demo
-![How to run](https://github.com/shivesh01/NGO_events/blob/master/images/website.png)
+![How to run]()
 
 ### Click on run this project
 ![Preview of project NGO event site](https://github.com/shivesh01/NGO_events/blob/master/images/How%20to%20Run%20project.png)
