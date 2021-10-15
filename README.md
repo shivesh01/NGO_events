@@ -1,5 +1,8 @@
 # Getting started 
 
+### Watch Demo for explanation
+Video Demo link: 
+
 ### Project Demo
 ![How to run](https://github.com/shivesh01/NGO_events/blob/master/images/website.png)
 
@@ -15,5 +18,4 @@
 <!--- changes getting started  --->
 <!--- Working demo Gif: 
 
-// Video Demo link:
 ---> 
