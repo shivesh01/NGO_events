@@ -1,7 +1,7 @@
 # Getting started 
 
-### Watch Demo for explanation
-Video Demo: https://youtu.be/x9298dkEtFY
+### Demo
+Video Demo: [Click to watch](https://youtu.be/x9298dkEtFY)
 
 ### Project Demo
 ![How to run](https://github.com/shivesh01/NGO_events/blob/master/images/website.png)
