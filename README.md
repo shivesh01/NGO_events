@@ -8,7 +8,7 @@ Video Demo: [Click to watch](https://youtu.be/x9298dkEtFY)
 
 ### Code: [Link⚡️](https://stackblitz.com/edit/ngo-events-wbx99y?file=index.html)
 
-### Website: [Link](https://web-codelab-a5b4d.firebaseapp.com/?109627)
+### Website: [Link](https://ngo-events-wbx99y.stackblitz.io)
 
 
 
